@@ -1,0 +1,55 @@
+﻿<Window x:Class="UserFirstLogonExperience.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserFirstLogonExperience"
+        mc:Ignorable="d"
+        Title="User First Logon Experience" Width="720" Height="1280" WindowState="Maximized" WindowStyle="None">
+    <Grid Background="#1F1F1F">
+        <Grid MaxWidth="1080" MaxHeight="794" Background="#004275">
+            <Rectangle Fill="#4C4C4C" Height="2" VerticalAlignment="Top"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="6"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="24"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Text="Shell Experience" FontFamily="Segoe UI Light" FontSize="48" Foreground="White" TextAlignment="Center" TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="3" Text="Select between a Tablet like experience or a Mobile like experience." FontFamily="Segoe UI Semi Light" FontSize="16" Foreground="White" TextAlignment="Center" TextWrapping="Wrap"/>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Margin="160,40,40,40" MaxWidth="340" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="Tablet.png" Height="277"/>
+                        <TextBlock Grid.Row="1" Text="Tablet Experience" FontFamily="Segoe UI Light" FontSize="24" Margin="8" Foreground="White" TextAlignment="Center" TextWrapping="Wrap"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="40,40,160,40" MaxWidth="340" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="Mobile.png" Height="277"/>
+                        <TextBlock Grid.Row="1" Text="Mobile Experience" FontFamily="Segoe UI Light" FontSize="24" Margin="8" Foreground="White" TextAlignment="Center" TextWrapping="Wrap"/>
+                    </Grid>
+
+                    <Button x:Name="DesktopClick" Grid.Column="0" Margin="160,40,40,40" MaxWidth="340" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" Click="DesktopClick_Click"/>
+                    <Button x:Name="MobileClick" Grid.Column="1" Margin="40,40,160,40" MaxWidth="340" VerticalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" Click="MobileClick_Click"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
